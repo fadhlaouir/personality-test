@@ -1,4 +1,4 @@
-# Quiz CRUD for Personality Test
+# Backend for Personality Test
 
 [![Author](http://img.shields.io/badge/author-@rfadhlaoui-blue.svg)](https://tn.linkedin.com/in/fadhlaouiraed)
 

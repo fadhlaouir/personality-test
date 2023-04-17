@@ -10,31 +10,30 @@ This is a simple personality test application built using the MERN stack (MongoD
 - Technologies Used
 - Contributing
 - License
-- Installation
 
-##### To install and run this application locally, follow these steps:
+### To install and run this application locally, follow these steps:
 
 Clone this repository using Git:
 
 ```
-git clone https://github.com/your-username/personality-test-app.git
+git clone https://github.com/fadhlaouir/personality-test.git
 ```
 
 Install the dependencies for the server:
 
 ```
-cd personality-test-app/server
+cd personality-test/backend
 npm install
 ```
 
-##### Install the dependencies for the client:
+### Install the dependencies for the client:
 
 ```
 cd ../client
 npm install
 ```
 
-##### Set up the environment variables:
+### Set up the environment variables:
 
 ```
 cd ..
@@ -43,15 +42,17 @@ cp .env.example .env
 
 Edit the .env file to set the necessary environment variables (e.g., PORT, MONGODB_URI).
 
-#### Start the server and client:
+**Please see README file in the backend folder for more information.**
+
+### Start client:
 
 ```
-npm run dev
+npm start
 ```
 
 Open your browser and go to http://localhost:3000 to see the application running.
 
-#### Usage
+### Usage
 
 To use the application, follow these steps:
 
@@ -67,27 +68,28 @@ To use the application, follow these steps:
 
 The server has the following CRUD API endpoints for managing the questions:
 
-| HTTP Method |    Endpoint    |       Description |
-| ----------- | :------------: | ----------------: |
-| GET         | /api/questions | Get all questions |
+| HTTP Method |      Endpoint       |            Description |
+| ----------- | :-----------------: | ---------------------: |
+| POST        |    /v1/api/quiz     |    Create new question |
+| GET         |   /v1/api/quizzes   |      Get all questions |
+| GET         | /v1/api/quizzes/:id |    Get single question |
+| PUT         | /v1/api/quizzes/:id | Update single question |
+| DELETE      | /v1/api/quizzes/:id | Delete single question |
 
-GET /api/questions/:id Get a question by ID
-POST /api/questions Create a new question
-PUT /api/questions/:id Update a question by ID
-DELETE /api/questions/:id Delete a question by ID
-Technologies Used
+##### Technologies Used
+
 This application uses the following technologies:
 
-MongoDB: A NoSQL database for storing the questions and their scores.
-Express.js: A backend web framework for building the server and APIs.
-React: A frontend library for building the user interface and components.
-Node.js: A backend JavaScript runtime for running the server and APIs.
-Axios: A Promise-based HTTP client for making API requests from the frontend.
-Mongoose: A MongoDB object modeling tool for creating the database schema and models.
-Jest: A JavaScript testing framework for writing unit tests for the APIs and components.
-Supertest: A library for testing HTTP requests and responses.
-Contributing
-Contributions are welcome! If you have any issues or suggestions, please open an issue or pull request.
+- `MongoDB`: A NoSQL database for storing the questions and their scores.
+- `Express.js`: A backend web framework for building the server and APIs.
+- `React`: A frontend library for building the user interface and components.
+- `Node.js`: A backend JavaScript runtime for running the server and APIs.
+- `Axios`: A Promise-based HTTP client for making API requests from the frontend.
+- `Mongoose`: A MongoDB object modeling tool for creating the database schema and models.
+- `Jest`: A JavaScript testing framework for writing unit tests for the APIs and components.
+- `Supertest`: A library for testing HTTP requests and responses.
+- `Swagger`: A tool for documenting the APIs.
 
-License
+### License
+
 This application is licensed under the MIT License.
