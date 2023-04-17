@@ -2,6 +2,9 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
+  "author": "@Raed Fadhlaoui <raed.fadhlaoui@hotmail.com>",
+  "description": "personality test app for the Full Stack Developer at Teamway",
+  "license": "ISC",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
