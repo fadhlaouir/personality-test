@@ -11,39 +11,6 @@ import styled from "styled-components";
 import { colors } from "../utils/_var";
 
 /* -------------------------------------------------------------------------- */
-/*                                 QUIZ STYLES                                */
-/* -------------------------------------------------------------------------- */
-const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 2rem;
-`;
-
-const Question = styled.div`
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-`;
-
-const Option = styled.button`
-  padding: 0.5rem;
-  margin: 0.5rem;
-  border: none;
-  border-radius: 0.25rem;
-  background-color: ${(props) =>
-    props.selected ? colors.$colorGold : colors.$colorSilver};
-  color: ${(props) => (props.selected ? "#fff" : "#000")};
-  cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
-
-  &:hover {
-    background-color: ${colors.$colorGold};
-    color: #fff;
-  }
-`;
-
-/* -------------------------------------------------------------------------- */
 /*                               QUIZ COMPONENT                               */
 /* -------------------------------------------------------------------------- */
 const Quiz = ({ quizData }) => {
@@ -112,3 +79,36 @@ const Quiz = ({ quizData }) => {
 };
 
 export default Quiz;
+
+/* -------------------------------------------------------------------------- */
+/*                                 QUIZ STYLES                                */
+/* -------------------------------------------------------------------------- */
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+`;
+
+const Question = styled.div`
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+`;
+
+const Option = styled.button`
+  padding: 0.5rem;
+  margin: 0.5rem;
+  border: none;
+  border-radius: 0.25rem;
+  background-color: ${(props) =>
+    props.selected ? colors.$colorGold : colors.$colorSilver};
+  color: ${(props) => (props.selected ? "#fff" : "#000")};
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+
+  &:hover {
+    background-color: ${colors.$colorGold};
+    color: #fff;
+  }
+`;
