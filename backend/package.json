@@ -2,6 +2,9 @@
     "name": "personality-test-backend",
     "version": "1.0.0",
     "main": "index.js",
+    "author": "@Raed Fadhlaoui <raed.fadhlaoui@hotmail.com>",
+    "description": "personality test app for the Full Stack Developer at Teamway",
+    "license": "ISC",
     "scripts": {
         "test": "NODE_ENV=test jest",
         "start": "NODE_ENV=production && node index.js",
@@ -42,8 +45,5 @@
     "engines": {
         "node": ">=14.16.0 <=16.13.0",
         "npm": ">=6.14.11 <=8.1.0"
-    },
-    "author": "@Raed Fadhlaoui <raed.fadhlaoui@hotmail.com>",
-    "description": "Expressn, MongoDB and swagger for api documentation",
-    "license": "ISC"
+    }
 }
