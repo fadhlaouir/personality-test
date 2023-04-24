@@ -57,9 +57,11 @@ const Quiz = ({ quizData }) => {
       {currentQuestion === quizData?.length ? (
         <>
           <Result>{result}</Result>
-          <button onClick={() => window.location.reload()}>
-            Take the quiz again
-          </button>
+          <ButtonContainer>
+            <Button onClick={() => window.location.reload()}>
+              Take the quiz again
+            </Button>
+          </ButtonContainer>
         </>
       ) : (
         <>
@@ -92,7 +94,24 @@ const Wrapper = styled.div`
 `;
 
 const Result = styled.h2`
-  margin-bottom: 20px;
+  font-weight: bold;
+`;
+const ButtonContainer = styled.div`
+  text-align: center;
+  margin-top: 20px;
+`;
+
+const Button = styled.button`
+  background-color: ${colors.$colorGold};
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
 `;
 
 const Question = styled.div`

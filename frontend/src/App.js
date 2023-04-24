@@ -7,7 +7,6 @@ import styled from "styled-components";
 
 // Local components
 import Quiz from "./components/Quiz";
-import QuizResult from "./components/QuizResult";
 
 // Utils
 import { API_ENDPOINT } from "./utils/config";
@@ -45,18 +44,6 @@ const App = () => {
       setCurrentQuestion(currentQuestion + 1);
     }
   };
-  /**
-   * handleRestartQuiz - Restarts the quiz by resetting the current
-   * question and selected options to 0
-   */
-  const handleRestartQuiz = () => {
-    setCurrentQuestion(0);
-    setSelectedOptions([]);
-  };
-  /**
-   * isQuizFinished - Checks if the quiz is finished
-   */
-  const isQuizFinished = currentQuestion === quizData.length - 1;
 
   /**
    * handleStartQuiz - Starts the quiz by hiding the "Start Personality Test" button
@@ -73,11 +60,6 @@ const App = () => {
         <ButtonContainer>
           <Button onClick={handleStartQuiz}>Start Personality Test</Button>
         </ButtonContainer>
-      ) : isQuizFinished ? (
-        <QuizResult
-          answers={selectedOptions}
-          onRestartQuiz={handleRestartQuiz}
-        />
       ) : (
         <Quiz
           quizData={quizData}
