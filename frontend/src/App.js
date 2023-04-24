@@ -17,8 +17,6 @@ import { colors } from "./utils/_var";
 /* -------------------------------------------------------------------------- */
 const App = () => {
   /* ---------------------------------- HOOKS --------------------------------- */
-  const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [selectedOptions, setSelectedOptions] = useState([]);
   const [quizData, setQuizData] = useState([]);
   const [showStartButton, setShowStartButton] = useState(true);
 
@@ -33,24 +31,12 @@ const App = () => {
   }, []);
 
   /* ----------------------------- RENDER HELPERS ----------------------------- */
-  /**
-   * handleOptionSelected - Handles the selection of an option in the quiz
-   * and moves to the next question if there is one available
-   * @param {*} optionValue - The value of the selected option
-   */
-  const handleOptionSelected = (optionValue) => {
-    setSelectedOptions([...selectedOptions, optionValue]);
-    if (currentQuestion < quizData.length - 1) {
-      setCurrentQuestion(currentQuestion + 1);
-    }
-  };
 
   /**
    * handleStartQuiz - Starts the quiz by hiding the "Start Personality Test" button
    */
   const handleStartQuiz = () => {
     setShowStartButton(false);
-    setCurrentQuestion(0);
   };
 
   /* -------------------------------- RENDERING ------------------------------- */
@@ -61,11 +47,7 @@ const App = () => {
           <Button onClick={handleStartQuiz}>Start Personality Test</Button>
         </ButtonContainer>
       ) : (
-        <Quiz
-          quizData={quizData}
-          currentQuestion={currentQuestion}
-          onOptionSelected={handleOptionSelected}
-        />
+        <Quiz quizData={quizData} />
       )}
     </div>
   );
