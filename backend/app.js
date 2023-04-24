@@ -22,6 +22,7 @@ dotenv.config();
 const app = express();
 
 // DATABASE CONNECTION
+mongoose.set('strictQuery', false);
 mongoose.connect(
   process.env.MONGODB_URI,
   {
