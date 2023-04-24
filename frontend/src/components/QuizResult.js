@@ -4,6 +4,10 @@
 // Packages
 import React from "react";
 
+// UI components
+import styled from "styled-components";
+import { colors } from "../utils/_var";
+
 /* -------------------------------------------------------------------------- */
 /*                                 Quiz Result                                */
 /* -------------------------------------------------------------------------- */
@@ -33,10 +37,34 @@ const QuizResult = ({ answers, onRestartQuiz }) => {
   /* -------------------------------- RENDERiNG ------------------------------- */
   return (
     <div>
-      <h2>You are a {result}!</h2>
-      <button onClick={onRestartQuiz}>Take the quiz again</button>
+      <Result>You are a {result}!</Result>
+      <ButtonContainer>
+        <Button onClick={onRestartQuiz}>Take the quiz again</Button>
+      </ButtonContainer>
     </div>
   );
 };
+
+const Result = styled.h2`
+  margin-bottom: 20px;
+`;
+
+const ButtonContainer = styled.div`
+  text-align: center;
+  margin-top: 120px;
+`;
+
+const Button = styled.button`
+  background-color: ${colors.$colorGold};
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+`;
 
 export default QuizResult;

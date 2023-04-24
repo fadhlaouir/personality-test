@@ -32,6 +32,7 @@ const Quiz = ({ quizData }) => {
       setCurrentQuestion(quizData.length);
     }
   };
+
   /**
    * introvertScore - Counts the number of introvert answers
    * in the answers array
@@ -55,7 +56,7 @@ const Quiz = ({ quizData }) => {
     <Wrapper>
       {currentQuestion === quizData?.length ? (
         <>
-          <div>{result}</div>
+          <Result>{result}</Result>
           <button onClick={() => window.location.reload()}>
             Take the quiz again
           </button>
@@ -88,6 +89,10 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   margin-top: 2rem;
+`;
+
+const Result = styled.h2`
+  margin-bottom: 20px;
 `;
 
 const Question = styled.div`
